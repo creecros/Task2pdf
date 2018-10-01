@@ -25,6 +25,7 @@ class PrintTaskController extends BaseController
         // instantiate and use t$options = new Options();
         $options = new Options();
         $options->set('isRemoteEnabled', 'true');
+        $options->set('defaultFont', 'Helvetica');
         $dompdf = new Dompdf($options);
         
 
