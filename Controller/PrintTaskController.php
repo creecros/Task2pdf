@@ -4,7 +4,7 @@ namespace Kanboard\Plugin\Task2pdf\Controller;
 
 require_once __DIR__.'/../dompdf/autoload.inc.php';
 
-use Dompdf;
+use Dompdf\Dompdf;
 use Kanboard\Controller\BaseController;
 
 
