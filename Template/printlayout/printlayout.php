@@ -1,5 +1,5 @@
 <section id="main" class="public-task">
-    <?= $this->render('task/details', array(
+    <?= $this->render('Task2pdf:printlayout/details', array(
         'task' => $task,
         'tags' => $tags,
         'project' => $project,
