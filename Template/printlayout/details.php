@@ -98,7 +98,7 @@
                     <td>
                     </td>
                     <td>
-                        <strong><?= t('Completed:') ?></strong>
+                        <strong><?= t('Finished:') ?></strong>
                         <span><?= $this->dt->datetime($task['date_completed']) ?></span>
                     </td>
       </tr>
