@@ -35,7 +35,7 @@ class PrintTaskController extends BaseController
         $subtasks = $this->subtaskModel->getAll($task['id']);
         $commentSortingDirection = $this->userMetadataCacheDecorator->get(UserMetadataModel::KEY_COMMENT_SORTING_DIRECTION, 'ASC');
 
-        $html = $this->helper->layout->app(('task/public', array(
+        $html = $this->helper->layout->app('task/public', array(
             'project' => $this->projectModel->getById($task['project_id']),
             'comments' => $this->commentModel->getAll($task['id'], $commentSortingDirection),
             'subtasks' => $subtasks,
@@ -48,7 +48,6 @@ class PrintTaskController extends BaseController
             'no_layout' => true,
             'auto_refresh' => true,
             'not_editable' => true,
-
         ));
         
         $dompdf->loadHtml($html);
