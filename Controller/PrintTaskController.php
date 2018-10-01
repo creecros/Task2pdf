@@ -28,7 +28,7 @@ class PrintTaskController extends BaseController
         $options->set('defaultFont', 'Helvetica');
         $options->set('debugCss', 'true');
         $dompdf = new Dompdf($options);
-        $dompdf->setBasePath(__DIR__.'/../../');
+        $dompdf->setBasePath('/var/www/app/');
         
 
         $task = $this->getTask();
