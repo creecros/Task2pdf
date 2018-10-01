@@ -1,7 +1,8 @@
 
 <section id="task-summary">
     <h2><?= $this->text->e($task['title']) ?></h2>
-
+    <div class="task-summary-container color-<?= $task['color_id'] ?>">
+<table style="width:100%">
         <tr>
           <th></th>
           <th></th>
@@ -101,6 +102,7 @@
                         <span><?= $this->dt->datetime($task['date_completed']) ?></span>
                     </td>
       </tr>
+      <tr>
                     <td>
                     </td>
                     <td>
@@ -112,8 +114,6 @@
                         <span><?= $this->dt->datetime($task['date_moved']) ?></span>
                     </td>
       </tr>
-
-
-
-
+</table>
+</div>
 </section>
