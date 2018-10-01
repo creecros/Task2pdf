@@ -6,6 +6,7 @@ require_once __DIR__.'/../dompdf/autoload.inc.php';
 
 use Dompdf\Dompdf;
 use Kanboard\Controller\BaseController;
+use Kanboard\Model\UserMetadataModel;
 
 
 class PrintTaskController extends BaseController
