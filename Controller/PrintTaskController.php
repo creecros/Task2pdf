@@ -27,7 +27,7 @@ class PrintTaskController extends BaseController
         $options->set('isRemoteEnabled', 'true');
         $options->set('defaultFont', 'Helvetica');
         $dompdf = new Dompdf($options);
-        $dompdf->setBasePath(realpath(APPLICATION_PATH . '/var/www/app/'));
+        $dompdf->setBasePath(__DIR__.'/../../');
         
 
         $task = $this->getTask();
