@@ -18,7 +18,7 @@ class PrintTaskController extends BaseController
         $dompdf = new Dompdf();
         $task = $this->getTask();
 
-        $dompdf->loadHtml($this->helper->layout->task('task/show', array(
+        $dompdf->loadHtml($this->template->render('task/show', array(
             'task' => $task,
             'project' => $this->projectModel->getById($task['project_id']),
             'files' => $this->taskFileModel->getAllDocuments($task['id']),
