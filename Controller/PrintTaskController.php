@@ -35,9 +35,9 @@ class PrintTaskController extends BaseController
         $subtasks = $this->subtaskModel->getAll($task['id']);
         $commentSortingDirection = $this->userMetadataCacheDecorator->get(UserMetadataModel::KEY_COMMENT_SORTING_DIRECTION, 'ASC');
 
-        $html = '<link rel="stylesheet" href="/var/www/app/assets/css/app.min.css">
-                 <link rel="stylesheet" href="/var/www/app/assets/css/vendor.min.css">
-                 <link rel="stylesheet" href="/var/www/app/assets/css/print.min.css">';
+        $html = '<link rel="stylesheet" href="/var/www/app/assets/css/app.min.css" media="screen">
+                 <link rel="stylesheet" href="/var/www/app/assets/css/vendor.min.css" media="screen">
+                 <link rel="stylesheet" href="/var/www/app/assets/css/print.min.css" media="print">';
         
         $html .= $this->helper->layout->app('task/public', array(
             'project' => $this->projectModel->getById($task['project_id']),
