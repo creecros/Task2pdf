@@ -28,7 +28,6 @@ class PrintTaskController extends BaseController
         $options->set('defaultFont', 'Helvetica');
         $options->set('isPhpEnabled', 'true');
         $options->set('isJavascriptEnabled', 'true');
-        $options->set('isHtml5ParserEnabled ', 'true');
         $dompdf = new Dompdf($options);
         $dompdf->setBasePath('/var/www/app/');
         
