@@ -26,7 +26,7 @@ class PrintTaskController extends BaseController
         $options = new Options();
         $options->set('isRemoteEnabled', 'true');
         $options->set('defaultFont', 'Helvetica');
-        $options->set('isPhpEnabled', 'true');
+        $options->set('fontHeightRatio', '.5');
         $options->set('isJavascriptEnabled', 'true');
         $dompdf = new Dompdf($options);
         $dompdf->setBasePath('/var/www/app/');
@@ -36,10 +36,8 @@ class PrintTaskController extends BaseController
         $subtasks = $this->subtaskModel->getAll($task['id']);
         $commentSortingDirection = $this->userMetadataCacheDecorator->get(UserMetadataModel::KEY_COMMENT_SORTING_DIRECTION, 'ASC');
 
-        $html = '<link rel="stylesheet" href="/var/www/app/assets/css/vendor.min.css?1529105036" media="screen">
-                 <link rel="stylesheet" href="/var/www/app/assets/css/app.min.css?1529105036" media="screen">';
         
-        $html .= $this->helper->layout->app('task/public', array(
+        $html = $this->helper->layout->app('task/public', array(
             'project' => $this->projectModel->getById($task['project_id']),
             'comments' => $this->commentModel->getAll($task['id'], $commentSortingDirection),
             'subtasks' => $subtasks,
