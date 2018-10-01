@@ -1,7 +1,7 @@
 
 <section id="task-summary">
     <h2><?= $this->text->e($task['title']) ?></h2>
-    <div class="task-summary-container color-<?= $task['color_id'] ?>">
+
         <tr>
           <th></th>
           <th></th>
@@ -114,6 +114,6 @@
       </tr>
 
 
-  </div>
+
 
 </section>
