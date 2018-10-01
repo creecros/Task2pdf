@@ -17,8 +17,10 @@ class PrintTaskController extends BaseController
         // instantiate and use the dompdf class
         $dompdf = new Dompdf();
         $task = $this->getTask();
+        $subtasks = $this->subtaskModel->getAll($task['id']);
+        $commentSortingDirection = $this->userMetadataCacheDecorator->get(UserMetadataModel::KEY_COMMENT_SORTING_DIRECTION, 'ASC');
 
-        $dompdf->loadHtml($this->template->render('task/show', array(
+        $dompdf->loadHtml($this->helper->layout->task('task/show', array(
             'task' => $task,
             'project' => $this->projectModel->getById($task['project_id']),
             'files' => $this->taskFileModel->getAllDocuments($task['id']),
