@@ -35,17 +35,20 @@ class PrintTaskController extends BaseController
         $subtasks = $this->subtaskModel->getAll($task['id']);
         $commentSortingDirection = $this->userMetadataCacheDecorator->get(UserMetadataModel::KEY_COMMENT_SORTING_DIRECTION, 'ASC');
 
-        $html = $this->helper->layout->app('task/show', array(
-            'task' => $task,
+        $html = $this->helper->layout->app(('task/public', array(
             'project' => $this->projectModel->getById($task['project_id']),
-            'files' => $this->taskFileModel->getAllDocuments($task['id']),
-            'images' => $this->taskFileModel->getAllImages($task['id']),
             'comments' => $this->commentModel->getAll($task['id'], $commentSortingDirection),
             'subtasks' => $subtasks,
-            'internal_links' => $this->taskLinkModel->getAllGroupedByLabel($task['id']),
-            'external_links' => $this->taskExternalLinkModel->getAll($task['id']),
-            'link_label_list' => $this->linkModel->getList(0, false),
-            'tags' => $this->taskTagModel->getTagsByTask($task['id']),
+            'links' => $this->taskLinkModel->getAllGroupedByLabel($task['id']),
+            'task' => $task,
+            'columns_list' => $this->columnModel->getList($task['project_id']),
+            'colors_list' => $this->colorModel->getList(),
+            'tags' => $this->taskTagModel->getList($task['id']),
+            'title' => $task['title'],
+            'no_layout' => true,
+            'auto_refresh' => true,
+            'not_editable' => true,
+
         ));
         
         $dompdf->loadHtml($html);
