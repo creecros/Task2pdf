@@ -5,6 +5,7 @@ namespace Kanboard\Plugin\Task2pdf\Controller;
 require_once __DIR__.'/../dompdf/autoload.inc.php';
 
 use Dompdf\Dompdf;
+use Dompdf\Options;
 use Kanboard\Controller\BaseController;
 use Kanboard\Model\UserMetadataModel;
 use Kanboard\Model\ProjectModel;
@@ -21,8 +22,12 @@ class PrintTaskController extends BaseController
 
     public function printTask()
     {
-        // instantiate and use the dompdf class
-        $dompdf = new Dompdf();
+        // instantiate and use t$options = new Options();
+        $options = new Options();
+        $options->set('isRemoteEnabled', 'true');
+        $dompdf = new Dompdf($options);
+        
+
         $task = $this->getTask();
         $subtasks = $this->subtaskModel->getAll($task['id']);
         $commentSortingDirection = $this->userMetadataCacheDecorator->get(UserMetadataModel::KEY_COMMENT_SORTING_DIRECTION, 'ASC');
