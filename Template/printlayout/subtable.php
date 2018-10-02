@@ -2,7 +2,7 @@
     <table style="border:1px solid #eee;border-collapse:collapse;width:100%;">
 
         <tr style="background-color: #eee;">
-            <th><?= t('Title') ?></th>
+            <th><?= t('     Title') ?></th>
             <th><?= t('Assignee') ?></th>
             <?= $this->hook->render('template:subtask:table:header:before-timetracking') ?>
             <th><?= t('Time tracking') ?></th>
@@ -14,7 +14,7 @@
                     <?= t('[x] ') ?>
                     <?= $this->subtask->renderTitle($subtask) ?>
                 <?php else: ?>
-                    <?= t('[ ] ') ?>
+                    <?= t('[  ] ') ?>
                     <?= $this->subtask->renderTitle($subtask) ?>
                 <?php endif ?>
             </td>
