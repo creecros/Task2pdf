@@ -15,7 +15,7 @@
         'is_public' => true,
     )) ?>
 
-    <?= $this->render('subtask/show', array(
+    <?= $this->render('Task2pdf:printlayout/subtasks', array(
         'task' => $task,
         'subtasks' => $subtasks,
         'editable' => false
