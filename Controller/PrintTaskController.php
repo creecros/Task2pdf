@@ -35,13 +35,14 @@ class PrintTaskController extends BaseController
 
         $task = $this->getTask();
         $subtasks = $this->subtaskModel->getAll($task['id']);
+        $files = $this->taskFileModel->getAllDocuments($task['id']);
         $commentSortingDirection = $this->userMetadataCacheDecorator->get(UserMetadataModel::KEY_COMMENT_SORTING_DIRECTION, 'ASC');
 
         $html = $this->helper->layout->app('Task2pdf:printlayout/printlayout', array(
             'project' => $this->projectModel->getById($task['project_id']),
             'comments' => $this->commentModel->getAll($task['id'], $commentSortingDirection),
             'subtasks' => $subtasks,
-            'files' => $this->taskFileModel->getAllDocuments($task['id']),
+            'files' => $files,
             'images' => $this->taskFileModel->getAllImages($task['id']),
             'links' => $this->taskLinkModel->getAllGroupedByLabel($task['id']),
             'task' => $task,
