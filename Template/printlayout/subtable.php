@@ -1,7 +1,7 @@
 <?php if (! empty($subtasks)): ?>
-    <table style="border:1px solid black;border-collapse:collapse;background-color:#eeeeee;width=100%">
+    <table style="border:1px solid black;border-collapse:collapse;background-color:#eeeeee;width=100%;">
     <thead>
-        <tr style="background-color:#fff">
+        <tr style="background-color:#fff;width:100%;">
             <th><?= t('Title') ?></th>
             <th><?= t('Assignee') ?></th>
             <?= $this->hook->render('template:subtask:table:header:before-timetracking') ?>
