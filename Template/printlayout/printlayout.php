@@ -1,5 +1,5 @@
 <section id="main" class="public-task">
-    <a style=" display: inline-block; font-size:9px; text-align: right; width: 100%;"> 
+    <a style=" display: inline-block; font-size:12px; text-align: left; width: 100%;"> 
     <?= $this->render('Task2pdf:printlayout/details', array(
         'task' => $task,
         'tags' => $tags,
