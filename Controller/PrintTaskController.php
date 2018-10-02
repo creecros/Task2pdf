@@ -14,6 +14,7 @@ use Kanboard\Model\TaskLinkModel;
 use Kanboard\Model\ColumnModel;
 use Kanboard\Model\ColorModel;
 use Kanboard\Model\TaskTagModel;
+use Kanboard\Model\TaskFileModel;
 
 
 class PrintTaskController extends BaseController
@@ -40,6 +41,7 @@ class PrintTaskController extends BaseController
             'project' => $this->projectModel->getById($task['project_id']),
             'comments' => $this->commentModel->getAll($task['id'], $commentSortingDirection),
             'subtasks' => $subtasks,
+            'files' => $this->taskFileModel->getAllDocuments($task['id']),
             'links' => $this->taskLinkModel->getAllGroupedByLabel($task['id']),
             'task' => $task,
             'columns_list' => $this->columnModel->getList($task['project_id']),
