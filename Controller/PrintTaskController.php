@@ -36,8 +36,8 @@ class PrintTaskController extends BaseController
         $subtasks = $this->subtaskModel->getAll($task['id']);
         $commentSortingDirection = $this->userMetadataCacheDecorator->get(UserMetadataModel::KEY_COMMENT_SORTING_DIRECTION, 'ASC');
 
-        
-        $html = $this->helper->layout->app('Task2pdf:printlayout/printlayout', array(
+        $html = '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">';
+        $html .= $this->helper->layout->app('Task2pdf:printlayout/printlayout', array(
             'project' => $this->projectModel->getById($task['project_id']),
             'comments' => $this->commentModel->getAll($task['id'], $commentSortingDirection),
             'subtasks' => $subtasks,
