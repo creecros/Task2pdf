@@ -21,7 +21,7 @@
         'editable' => false
     )) ?>
 
-    <?= $this->render('task_internal_link/show', array(
+    <?= $this->render('Task2pdf:printlayout/internal_links', array(
         'task' => $task,
         'links' => $links,
         'project' => $project,
