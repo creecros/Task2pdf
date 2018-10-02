@@ -29,6 +29,7 @@
         'files' => $files,
         'images' => $images
     )) ?>
+   <?php endif ?>
    <?php if (!empty($links)): ?>
     <?= $this->render('Task2pdf:printlayout/internal_links', array(
         'task' => $task,
