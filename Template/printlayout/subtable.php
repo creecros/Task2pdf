@@ -1,10 +1,7 @@
 <?php if (! empty($subtasks)): ?>
-    <table
-        class="subtasks-table table-striped table-scrolling"
-        data-save-position-url="<?= $this->url->href('SubtaskController', 'movePosition', array('project_id' => $task['project_id'], 'task_id' => $task['id'])) ?>"
-    >
+    <table style="border: 1px solid black;border-collapse: collapse;background-color: #eee;">
     <thead>
-        <tr>
+        <tr style="background-color: #fff;">
             <th class="column-45"><?= t('Title') ?></th>
             <th class="column-15"><?= t('Assignee') ?></th>
             <?= $this->hook->render('template:subtask:table:header:before-timetracking') ?>
