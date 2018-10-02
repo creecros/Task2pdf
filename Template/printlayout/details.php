@@ -1,5 +1,6 @@
 <section id="task-summary">
-    <h2><?= t('#') ?>
+    <h2><?= $this->text->e($project['name']) ?>
+        <?= t(' > #') ?>
         <?= $this->text->e($task['id']) ?>
         <?= t(' ') ?>
         <?= $this->text->e($task['title']) ?>
