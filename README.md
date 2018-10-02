@@ -18,4 +18,4 @@ Convert a Task to a PDF, Printer Friendly!
 
 ## Example PDF:
 
-![image](https://user-images.githubusercontent.com/26339368/46330668-14614580-c5e2-11e8-8462-faad4ccaa89c.png)
+![image](https://user-images.githubusercontent.com/26339368/46361826-9f6f2980-c63c-11e8-9ab9-de9d76e85f2a.png)
