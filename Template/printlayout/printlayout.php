@@ -7,6 +7,7 @@
         'editable' => false,
     )) ?>
     </a>
+    <br>
     <a style=" display: inline-block; font-size:14px; text-align: left; width: 95%;"> 
     <?= $this->render('task/description', array(
         'task' => $task,
