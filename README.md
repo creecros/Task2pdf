@@ -13,7 +13,7 @@ Convert a Task to a PDF, Printer Friendly!
 
 ## Menu item:
 
-![image](https://user-images.githubusercontent.com/26339368/46330553-6d7ca980-c5e1-11e8-9b24-dc6d553451d5.png)
+![image](https://user-images.githubusercontent.com/26339368/46331051-f5fc4980-c5e3-11e8-8d3c-f1d023ee20eb.png)
 
 
 ## Example PDF:
