@@ -17,24 +17,12 @@
             <?php endif ?>
         <tr style="background-color: #fff;">>
             <td>
-                <?php if ($is_public): ?>
-                    <?= $this->url->link(
-                        $this->text->e('#'.$link['task_id'].' '.$link['title']),
-                        'TaskViewController',
-                        'readonly',
-                        array('task_id' => $link['task_id'], 'token' => $project['token']),
-                        false,
-                        $link['is_active'] ? '' : 'task-link-closed'
-                    ) ?>
+                <?php if ($link['is_active']): ?>
+                    <?= $this->text->e('#'.$link['task_id'].' '.$link['title']) ?>
                 <?php else: ?>
-                    <?= $this->url->link(
-                        $this->text->e('#'.$link['task_id'].' '.$link['title']),
-                        'TaskViewController',
-                        'show',
-                        array('task_id' => $link['task_id'], 'project_id' => $link['project_id']),
-                        false,
-                        $link['is_active'] ? '' : 'task-link-closed'
-                    ) ?>
+                <strike>
+                    <?= $this->text->e('#'.$link['task_id'].' '.$link['title']) ?>
+                </strike>
                 <?php endif ?>
 
                 (<?php if ($link['project_id'] != $project['id']): ?><?= $this->text->e($link['project_name']) ?> - <?php endif ?><?= $this->text->e($link['column_title']) ?>)
