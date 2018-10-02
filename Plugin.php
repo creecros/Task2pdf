@@ -32,7 +32,7 @@ class Plugin extends Base
 
 	public function getPluginDescription() 
 	{ 
-		return 'Print Tasks'; 
+		return 'Create a printer friendly PDF of a task.'; 
 	}
 
 	public function getPluginHomepage() 
