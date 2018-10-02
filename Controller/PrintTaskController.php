@@ -42,6 +42,7 @@ class PrintTaskController extends BaseController
             'comments' => $this->commentModel->getAll($task['id'], $commentSortingDirection),
             'subtasks' => $subtasks,
             'files' => $this->taskFileModel->getAllDocuments($task['id']),
+            'images' => $this->taskFileModel->getAllImages($task['id']),
             'links' => $this->taskLinkModel->getAllGroupedByLabel($task['id']),
             'task' => $task,
             'columns_list' => $this->columnModel->getList($task['project_id']),
