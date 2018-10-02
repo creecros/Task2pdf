@@ -6,6 +6,8 @@
         <?= $this->text->e($task['title']) ?>
     </h2>
     
+        <?= $this->hook->render('template:task:details:top', array('task' => $task)) ?>
+
     <div class="task-summary-container color-<?= $task['color_id'] ?>">
 <table style="width:100%">
         <tr>
@@ -121,4 +123,5 @@
       </tr>
 </table>
 </div>
+        <?= $this->hook->render('template:task:details:bottom', array('task' => $task)) ?>
 </section>
