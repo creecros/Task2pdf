@@ -1,14 +1,14 @@
 <?php if (! empty($subtasks)): ?>
-    <table style="border-bottom:1px solid #ddd;border-collapse:collapse;width:100%;">
+    <table style="border:1px solid #eee;border-collapse:collapse;background-color: #eee;width:100%;">
 
-        <tr style="border-bottom:1px solid #ddd;border-collapse:collapse;width:100%;">
+        <tr style="background-color: #fff;">
             <th><?= t('Title') ?></th>
             <th><?= t('Assignee') ?></th>
             <?= $this->hook->render('template:subtask:table:header:before-timetracking') ?>
             <th><?= t('Time tracking') ?></th>
         </tr>
         <?php foreach ($subtasks as $subtask): ?>
-        <tr style="border-bottom:1px solid #ddd;border-collapse:collapse;width:100%;">
+        <tr style="background-color: #fff;">
             <td>
                 <?php if ($subtask['status'] > 1): ?>
                     <?= t('[x] - ') ?>
