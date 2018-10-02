@@ -1,6 +1,6 @@
 # Task2PDF
 
-Print Task Details to PDF
+Convert a Task to a PDF, Printer Friendly!
 
 # What do?
 
