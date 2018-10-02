@@ -1,6 +1,6 @@
 <?php if (! empty($files)): ?>
-    <table class="table-striped table-scrolling">
-        <tr style="border:1px solid #eee;border-collapse:collapse;width:100%;">
+    <table style="border:1px solid #eee;border-collapse:collapse;width:100%;">
+        <tr style="background-color: #eee;">
             <th><?= t('Filename') ?></th>
             <th><?= t('Creator') ?></th>
             <th><?= t('Date') ?></th>
