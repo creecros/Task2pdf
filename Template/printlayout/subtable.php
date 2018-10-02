@@ -25,10 +25,21 @@
             </td>
             <?= $this->hook->render('template:subtask:table:rows', array('subtask' => $subtask)) ?>
             <td>
-                <?= $this->render('subtask/timer', array(
-                    'task'    => $task,
-                    'subtask' => $subtask,
-                )) ?>
+                <span class="subtask-time-tracking">
+                   <?php if (! empty($subtask['time_spent'])): ?>
+                       <?= t('%sh spent', n($subtask['time_spent'])) ?>
+                   <?php endif ?>
+
+                   <?php if (! empty($subtask['time_spent']) && ! empty($subtask['time_estimated'])): ?>/<?php endif ?>
+
+                   <?php if (! empty($subtask['time_estimated'])): ?>
+                   <?= t('%sh estimated', n($subtask['time_estimated'])) ?>
+                   <?php endif ?>
+
+                   <?php if ($this->user->hasProjectAccess('SubtaskController', 'edit', $task['project_id']) && $subtask['user_id'] == $this->user->getId()): ?>
+                       <?= $this->subtask->renderTimer($task, $subtask) ?>
+                   <?php endif ?>
+                </span>
             </td>
         </tr>
         <?php endforeach ?>
