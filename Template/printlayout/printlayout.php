@@ -21,7 +21,7 @@
         'editable' => false
     )) ?>
         
-    <?= $this->render('task_file/show', array(
+    <?= $this->render('Task2pdf:printlayout/files', array(
         'task' => $task,
         'files' => $files,
         'images' => $images
