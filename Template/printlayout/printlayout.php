@@ -1,11 +1,12 @@
 <section id="main" class="public-task">
+    <a style=" display: inline-block; font-size:9px; text-align: right; width: 100%;"> 
     <?= $this->render('Task2pdf:printlayout/details', array(
         'task' => $task,
         'tags' => $tags,
         'project' => $project,
         'editable' => false,
     )) ?>
-    
+    </a>
     <?= $this->render('task/description', array(
         'task' => $task,
         'project' => $project,
