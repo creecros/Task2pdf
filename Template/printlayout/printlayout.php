@@ -29,7 +29,7 @@
         'is_public' => true,
     )) ?>
 
-    <?= $this->render('task_comments/show', array(
+    <?= $this->render('Task2pdf:printlayout/comments', array(
         'task' => $task,
         'comments' => $comments,
         'project' => $project,
