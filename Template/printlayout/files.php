@@ -3,6 +3,6 @@
         <h3><a href="#" class="fa accordion-toggle"></a> <?= t('Attachments') ?></h3>
     </div>
     <div class="accordion-content">
-        <?= $this->render('Task2pdf:printlayout/files', array('task' => $task, 'files' => $files)) ?>
+        <?= $this->render('Task2pdf:printlayout/file_table', array('task' => $task, 'files' => $files)) ?>
     </div>
 </section>
