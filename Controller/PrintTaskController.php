@@ -61,7 +61,7 @@ class PrintTaskController extends BaseController
         $dompdf->render();
 
         // Output the generated PDF to Browser
-        $dompdf->stream();
+        $dompdf->stream($task['id'] . '_' . $task['title'] . '.pdf');
 
     }
 
