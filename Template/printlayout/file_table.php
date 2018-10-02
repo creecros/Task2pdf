@@ -1,4 +1,4 @@
-<?php if (!empty($files) || !empty($image)): ?>
+<?php if (!empty($files) && !empty($image)): ?>
     <table style="border:1px solid #eee;border-collapse:collapse;width:100%;">
         <tr style="background-color: #eee;">
             <th><?= t('Filename') ?></th>
