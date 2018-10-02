@@ -22,5 +22,21 @@
                 </td>
             </tr>
         <?php endforeach ?>
+        <?php foreach ($images as $image): ?>
+            <tr style="background-color: #fff;">
+                <td>
+                    <?= $this->text->e($image['name']) ?>
+                </td>
+                <td>
+                    <?= $this->text->e($image['user_name'] ?: $file['username']) ?>
+                </td>
+                <td>
+                    <?= $this->dt->date($image['date']) ?>
+                </td>
+                <td>
+                    <?= $this->text->bytes($image['size']) ?>
+                </td>
+            </tr>
+        <?php endforeach ?>
     </table>
 <?php endif ?>
