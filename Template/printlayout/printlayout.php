@@ -20,6 +20,12 @@
         'subtasks' => $subtasks,
         'editable' => false
     )) ?>
+        
+    <?= $this->render('task_file/show', array(
+        'task' => $task,
+        'files' => $files,
+        'images' => $images
+    )) ?>
 
     <?= $this->render('Task2pdf:printlayout/internal_links', array(
         'task' => $task,
