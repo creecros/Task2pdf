@@ -1,5 +1,5 @@
 <section id="main" class="public-task">
-    <a style=" display: inline-block; font-size:12px; text-align: left; width: 100%;"> 
+    <a style=" display: inline-block; font-size:12px; text-align: left; width: 100%; word-wrap: break-word;"> 
     <?= $this->render('Task2pdf:printlayout/details', array(
         'task' => $task,
         'tags' => $tags,
@@ -8,7 +8,7 @@
     )) ?>
     </a>
     <br>
-    <a style=" display: inline-block; font-size:14px; text-align: left; width: 95%;"> 
+    <a style=" display: inline-block; font-size:14px; text-align: left; width: 95%; word-wrap: break-word;"> 
    <?php if (!empty($task['description'])): ?>
     <?= $this->render('task/description', array(
         'task' => $task,
