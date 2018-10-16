@@ -14,6 +14,13 @@ class Plugin extends Base
 		$this->template->hook->attach('template:task:sidebar:information', 'task2pdf:print');
 	}
 
+	public function getClasses() {
+        return array(
+            'Plugin\Task2pdf\Model' => array(
+                'PrintModel',
+            )
+        );
+       }
 	
 	public function getPluginName()	
 	{ 		 
