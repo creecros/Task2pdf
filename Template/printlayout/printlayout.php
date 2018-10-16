@@ -10,7 +10,7 @@
     <br>
     <a style=" display: inline-block; font-size:14px; text-align: left; width: 95%; word-wrap: break-word;"> 
    <?php if (!empty($task['description'])): ?>
-    <?= $this->render('task/description', array(
+    <?= $this->render('Task2pdf:printlayout/description', array(
         'task' => $task,
         'project' => $project,
         'is_public' => true,
