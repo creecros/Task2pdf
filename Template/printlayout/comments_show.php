@@ -1,7 +1,7 @@
 <div class="comment <?= isset($preview) ? 'comment-preview' : '' ?>" id="comment-<?= $comment['id'] ?>">
     <div class="comment-content">
         <div style="background-color:#eee" class="markdown">
-            <?= $this->text->markdown($comment['comment'], isset($is_public) && $is_public) ?>
+            <?= $this->text->markdown($this->task->printModel->codeblockFix($comment['comment']), isset($is_public) && $is_public) ?>
         </div>
     </div>
     <div class="comment-title">
