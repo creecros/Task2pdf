@@ -68,6 +68,13 @@ class PrintTaskController extends BaseController
         $dompdf->stream($task['id'] . '_' . $task['title'] . '.pdf');
 
     }
+    
+    public function codeblockFix($toFix)
+    {
+        $toFix = str_replace('```', '`', $toFix);
+        $toFix = str_replace('~~~', '`', $toFix);
+        return $toFix;
+    }
 
 }
 
