@@ -3,14 +3,9 @@
     <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <style>
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
-
-@import url(//fonts.googleapis.com/earlyaccess/notosanssc.css);
-@import url(//fonts.googleapis.com/earlyaccess/notosansjp.css);
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
 * {
-font-family: 'Noto Sans KY', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
 }
   </style>
     </head>
