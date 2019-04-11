@@ -1,9 +1,18 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-        <style>
-            body { font-family: 'Noto Sans', sans-serif; }
-        </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style>
+    @font-face {
+      font-family: 'Firefly Sung';
+      font-style: normal;
+      font-weight: 400;
+      src: url(http://eclecticgeek.com/dompdf/fonts/cjk/fireflysung.ttf) format('truetype');
+    }
+    * {
+      font-family: Firefly Sung, DejaVu Sans, sans-serif;
+    }
+  </style>
     </head>
 <body>     
     <section id="main" class="public-task">
