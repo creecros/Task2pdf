@@ -9,6 +9,12 @@
       font-weight: 400;
       src: url(http://eclecticgeek.com/dompdf/fonts/cjk/fireflysung.ttf) format('truetype');
     }
+    @font-face {
+      font-family: 'Firefly Sung';
+      font-style: normal;
+      font-weight: bold;
+      src: url(http://eclecticgeek.com/dompdf/fonts/cjk/fireflysung.ttf) format('truetype');
+    }
     * {
       font-family: Firefly Sung, DejaVu Sans, sans-serif;
     }
