@@ -18,7 +18,7 @@
         </tr>
         <tr>
                     <td>
-                        <strong><?= t('Status:') ?></strong>
+                        <?= t('Status:') ?>
                         <span>
                         <?php if ($task['is_active'] == 1): ?>
                             <?= t('open') ?>
@@ -28,11 +28,11 @@
                         </span>
                     </td>
                     <td>
-                            <strong><?= t('Category:') ?></strong>
+                            <?= t('Category:') ?>
                             <span><?= $this->text->e($task['category_name']) ?></span>
                     </td>
                     <td>
-                        <strong><?= t('Assignee:') ?></strong>
+                        <?= t('Assignee:') ?>
                         <span>
                         <?php if ($task['assignee_username']): ?>
                             <?= $this->text->e($task['assignee_name'] ?: $task['assignee_username']) ?>
