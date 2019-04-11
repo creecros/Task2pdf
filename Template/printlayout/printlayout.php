@@ -2,8 +2,8 @@
 <html>
     <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
   <style>
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
 * {
 font-family: 'Noto Sans KR', sans-serif;
 }
