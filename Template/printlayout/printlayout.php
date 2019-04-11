@@ -7,10 +7,10 @@
       font-family: 'Firefly Sung';
       font-style: normal;
       font-weight: 400;
-      src: url(http://eclecticgeek.com/dompdf/fonts/cjk/fireflysung.ttf) format('truetype');
+      src: url(/plugins/Task2pdf/font/NotoSans-Regular.ttf) format('truetype');
     }
     * {
-      font-family: Firefly Sung, DejaVu Sans, sans-serif;
+      font-family: 'Noto Sans';
     }
   </style>
     </head>
