@@ -10,7 +10,7 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 * {
-font-family: 'Noto Sans', sans-serif;
+font-family: 'Noto Sans', 'Noto Sans JP', 'Noto Sans KR', 'Noto Sans TC', 'Noto Sans SC', sans-serif;
 }
   </style>
     </head>
