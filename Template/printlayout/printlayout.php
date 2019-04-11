@@ -2,15 +2,10 @@
 <html>
     <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Sans+JP|Noto+Sans+KR|Noto+Sans+SC|Noto+Sans+TC" rel="stylesheet">
   <style>
-    @font-face {
-      font-family: 'Firefly Sung';
-      font-style: normal;
-      font-weight: 400;
-      src: url(/plugins/Task2pdf/font/NotoSans-Regular.ttf) format('truetype');
-    }
     * {
-      font-family: 'Noto Sans';
+      font-family: 'Noto Sans', 'Noto Sans KR', 'Noto Sans JP', 'Noto Sans TC', 'Noto Sans SC', sans-serif;
     }
   </style>
     </head>
