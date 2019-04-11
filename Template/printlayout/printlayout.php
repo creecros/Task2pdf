@@ -3,27 +3,10 @@
     <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <style>
-    @font-face {
-      font-family: 'Firefly Sung';
-      font-style: normal;
-      font-weight: 400;
-      src: url(https://github.com/creecros/Task2pdf/blob/creecros-patch-2/font/NotoSansMonoCJKkr-Regular.otf?raw=true) format('opentype');
-    }
-    @font-face {
-      font-family: 'Firefly Sung';
-      font-style: normal;
-      font-weight: bold;
-      src: url(https://github.com/creecros/Task2pdf/blob/creecros-patch-2/font/NotoSansMonoCJKkr-Regular.otf?raw=true) format('opentype');
-    }
-     @font-face {
-      font-family: 'Firefly Sung';
-      font-style: normal;
-      font-weight: bold;
-      font-style: italic;
-         src: url(https://github.com/creecros/Task2pdf/blob/creecros-patch-2/font/NotoSansMonoCJKkr-Regular.otf?raw=true) format('opentype');
-    }
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+
     * {
-      font-family: Firefly Sung, DejaVu Sans, sans-serif;
+      font-family: Noto Sans KR, DejaVu Sans, sans-serif;
     }
   </style>
     </head>
