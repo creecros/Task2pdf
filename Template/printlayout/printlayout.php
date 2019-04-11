@@ -7,20 +7,20 @@
       font-family: 'Firefly Sung';
       font-style: normal;
       font-weight: 400;
-      src: url(https://github.com/aosp-mirror/platform_frameworks_base/blob/master/data/fonts/DroidSansFallback.ttf?raw=true) format('truetype');
+      src: url(https://github.com/aosp-mirror/platform_frameworks_base/blob/de0fe2daafb769cc37ca922ffef6dbafb8c6cae2/data/fonts/DroidSansFallback.ttf?raw=true) format('truetype');
     }
     @font-face {
       font-family: 'Firefly Sung';
       font-style: normal;
       font-weight: bold;
-      src: url(https://github.com/aosp-mirror/platform_frameworks_base/blob/master/data/fonts/DroidSansFallback.ttf?raw=true) format('truetype');
+      src: url(https://github.com/aosp-mirror/platform_frameworks_base/blob/de0fe2daafb769cc37ca922ffef6dbafb8c6cae2/data/fonts/DroidSansFallback.ttf?raw=true) format('truetype');
     }
      @font-face {
       font-family: 'Firefly Sung';
       font-style: normal;
       font-weight: bold;
       font-style: italic;
-         src: url(https://github.com/aosp-mirror/platform_frameworks_base/blob/master/data/fonts/DroidSansFallback.ttf?raw=true) format('truetype');
+         src: url(https://github.com/aosp-mirror/platform_frameworks_base/blob/de0fe2daafb769cc37ca922ffef6dbafb8c6cae2/data/fonts/DroidSansFallback.ttf?raw=true) format('truetype');
     }
     * {
       font-family: Firefly Sung, DejaVu Sans, sans-serif;
