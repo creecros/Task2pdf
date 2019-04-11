@@ -1,4 +1,12 @@
-<section id="main" class="public-task">
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+        <style>
+            body { font-family: 'Noto Sans', sans-serif; }
+        </style>
+    </head>
+<body>     
+    <section id="main" class="public-task">
     <a style=" display: inline-block; font-size:12px; text-align: left; width: 100%; word-wrap: break-word;"> 
     <?= $this->render('Task2pdf:printlayout/details', array(
         'task' => $task,
@@ -50,4 +58,7 @@
    <?php endif ?>
     </a>
 </section>
+</body>
+</html>
+
 
