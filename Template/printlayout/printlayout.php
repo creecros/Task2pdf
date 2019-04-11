@@ -4,13 +4,55 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <style>
 @font-face {
-font-family: 'Firefly Sung';
-font-style: normal;
-font-weight: 400;
-src: url(http://eclecticgeek.com/dompdf/fonts/cjk/fireflysung.ttf) format('truetype');
+  font-family: 'Source Han Sans Web';
+  font-style: normal;
+  font-weight: 100;
+  src: url('fonts/SourceHanSans-ExtraLight.otf') format('opentype');
+}
+ 
+@font-face {
+  font-family: 'Source Han Sans Web';
+  font-style: normal;
+  font-weight: 200;
+  src: url('fonts/SourceHanSans-Light.otf') format('opentype');
+}
+ 
+@font-face {
+  font-family: 'Source Han Sans Web';
+  font-style: normal;
+  font-weight: 300;
+  src: url('fonts/SourceHanSans-Normal.otf') format('opentype');
+}
+ 
+@font-face {
+   font-family: 'Source Han Sans Web';
+   font-style: normal;
+   font-weight: 400;
+   src: url('fonts/SourceHanSans-Regular.otf') format('opentype');
+}
+ 
+@font-face {
+   font-family: 'Source Han Sans Web';
+   font-style: normal;
+   font-weight: 500;
+   src: url('fonts/SourceHanSans-Medium.otf') format('opentype');
+}
+ 
+@font-face {
+   font-family: 'Source Han Sans Web';
+   font-style: normal;
+   font-weight: 700;
+   src: url('fonts/SourceHanSans-Bold.otf') format('opentype');
+}
+ 
+@font-face {
+   font-family: 'Source Han Sans Web';
+   font-style: normal;
+   font-weight: 900;
+   src: url('fonts/SourceHanSans-Heavy.otf') format('opentype');
 }
 * {
-font-family: Firefly Sung, DejaVu Sans, sans-serif;
+font-family: Source Han Sans Web, DejaVu Sans, sans-serif;
 }
   </style>
     </head>
