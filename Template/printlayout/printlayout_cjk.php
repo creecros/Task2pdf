@@ -7,20 +7,23 @@
       font-family: 'Droid Sans';
       font-style: normal;
       font-weight: 400;
-      src: url(/plugins/Task2pdf/font/DroidSansFallback.ttf) format('truetype');
+      src: url('/plugins/Task2pdf/font/DroidSansFallback.ttf') format('truetype');
+      src: url(https://github.com/creecros/Task2pdf/blob/creecros-patch-2/font/DroidSansFallback.ttf?raw=true) format('truetype');
     }
     @font-face {
       font-family: 'Droid Sans';
       font-style: normal;
       font-weight: bold;
-      src: url(/plugins/Task2pdf/font/DroidSansFallback.ttf) format('truetype');
+      src: url('/plugins/Task2pdf/font/DroidSansFallback.ttf') format('truetype');
+      src: url(https://github.com/creecros/Task2pdf/blob/creecros-patch-2/font/DroidSansFallback.ttf?raw=true) format('truetype');
     }
      @font-face {
       font-family: 'Droid Sans';
       font-style: normal;
       font-weight: bold;
       font-style: italic;
-      src: url(/plugins/Task2pdf/font/DroidSansFallback.ttf) format('truetype');
+      src: url('/plugins/Task2pdf/font/DroidSansFallback.ttf') format('truetype');
+      src: url(https://github.com/creecros/Task2pdf/blob/creecros-patch-2/font/DroidSansFallback.ttf?raw=true) format('truetype');
     }
     * {
       font-family: Droid Sans, DejaVu Sans, sans-serif;
