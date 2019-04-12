@@ -17,6 +17,9 @@ Convert a Task to a PDF, Printer Friendly!
 * Gain sidebar item to "Create PDF"
 * PDF is created that is simple and printer friendly
 * Win!
+* Support for CJK Characters!
+
+*To turn on CJK Support, go to **Settings > Application Settings**, and the toggle will be located toward the bottom of the page.*
 
 # Screenshots?
 
