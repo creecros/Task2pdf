@@ -12,7 +12,7 @@ class Plugin extends Base
 	public function initialize()
 	{
 		$this->template->hook->attach('template:task:sidebar:information', 'task2pdf:print');
-		$this->template->hook->attach('template:config:application', 'group_assign:config/font_toggle');
+		$this->template->hook->attach('template:config:application', 'task2pdf:config/font_toggle');
 	}
 
 	public function getClasses() {
