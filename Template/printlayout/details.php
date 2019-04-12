@@ -43,7 +43,9 @@
                     </td>
                     <td>
                             <strong><?= t('Due date:') ?></strong>
+                            <?php if ($task['date_due'] > 0): ?>
                             <span><?= $this->dt->datetime($task['date_due']) ?></span>
+                            <?php endif ?>
                     </td>
       </tr>
       <tr>         
@@ -60,7 +62,9 @@
                     </td>
                     <td>
                         <strong><?= t('Started:') ?></strong>
+                            <?php if ($task['date_started'] > 0): ?>
                             <span><?= $this->dt->datetime($task['date_started']) ?></span>
+                            <?php endif ?>
                     </td>   
       </tr>
       <tr>
@@ -77,7 +81,9 @@
                     </td>
                     <td>
                         <strong><?= t('Created:') ?></strong>
+                        <?php if ($task['date_creation'] > 0): ?>
                         <span><?= $this->dt->datetime($task['date_creation']) ?></span>
+                        <?php endif ?>
                     </td>
       </tr>
       <tr>
@@ -94,7 +100,9 @@
                     </td>
                     <td>
                         <strong><?= t('Modified:') ?></strong>
+                        <?php if ($task['date_modification'] > 0): ?>
                         <span><?= $this->dt->datetime($task['date_modification']) ?></span>
+                        <?php endif ?>
                     </td>
       </tr>
       <tr>
@@ -105,8 +113,10 @@
                     <td>
                     </td>
                     <td>
-                        <strong><?= t('Finished:') ?></strong>
+                        <strong><?= t('Completed:') ?></strong>
+                        <?php if ($task['date_completed'] > 0): ?>
                         <span><?= $this->dt->datetime($task['date_completed']) ?></span>
+                        <?php endif ?>
                     </td>
       </tr>
       <tr>
@@ -118,7 +128,9 @@
                     </td>       
                     <td>
                         <strong><?= t('Moved:') ?></strong>
+                        <?php if ($task['date_completed'] > 0): ?>
                         <span><?= $this->dt->datetime($task['date_moved']) ?></span>
+                        <?php endif ?>
                     </td>
       </tr>
 </table>
