@@ -4,26 +4,26 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <style>
    @font-face {
-      font-family: 'Firefly Sung';
+      font-family: 'Droid Sans';
       font-style: normal;
       font-weight: 400;
-      src: url(https://github.com/aosp-mirror/platform_frameworks_base/blob/de0fe2daafb769cc37ca922ffef6dbafb8c6cae2/data/fonts/DroidSansFallback.ttf?raw=true) format('truetype');
+      src: url(/plugins/Task2pdf/font/DroidSansFallback.ttf) format('truetype');
     }
     @font-face {
-      font-family: 'Firefly Sung';
+      font-family: 'Droid Sans';
       font-style: normal;
       font-weight: bold;
-      src: url(https://github.com/aosp-mirror/platform_frameworks_base/blob/de0fe2daafb769cc37ca922ffef6dbafb8c6cae2/data/fonts/DroidSansFallback.ttf?raw=true) format('truetype');
+      src: url(/plugins/Task2pdf/font/DroidSansFallback.ttf) format('truetype');
     }
      @font-face {
-      font-family: 'Firefly Sung';
+      font-family: 'Droid Sans';
       font-style: normal;
       font-weight: bold;
       font-style: italic;
-         src: url(https://github.com/aosp-mirror/platform_frameworks_base/blob/de0fe2daafb769cc37ca922ffef6dbafb8c6cae2/data/fonts/DroidSansFallback.ttf?raw=true) format('truetype');
+      src: url(/plugins/Task2pdf/font/DroidSansFallback.ttf) format('truetype');
     }
     * {
-      font-family: Firefly Sung, DejaVu Sans, sans-serif;
+      font-family: Droid Sans, DejaVu Sans, sans-serif;
     }
   </style>
     </head>
