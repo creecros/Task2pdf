@@ -28,7 +28,7 @@
   </style>
     </head>
 <body>     
-    <section id="main" class="public-task">
+    <section id="main" class="public-task" style="page-break-before: always;">
     <a style="display: inline-block; font-size:12px; text-align: left; width: 100%; word-wrap: break-word;"> 
     <?= $this->render('Task2pdf:printlayout/details', array(
         'task' => $task,
