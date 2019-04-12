@@ -1,35 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <style>
-    @font-face {
-      font-family: 'Firefly Sung';
-      font-style: normal;
-      font-weight: 400;
-      src: url(http://eclecticgeek.com/dompdf/fonts/cjk/fireflysung.ttf) format('truetype');
-    }
-    @font-face {
-      font-family: 'Firefly Sung';
-      font-style: normal;
-      font-weight: bold;
-      src: url(http://eclecticgeek.com/dompdf/fonts/cjk/fireflysung.ttf) format('truetype');
-    }
-     @font-face {
-      font-family: 'Firefly Sung';
-      font-style: normal;
-      font-weight: bold;
-      font-style: italic;
-         src: url(http://eclecticgeek.com/dompdf/fonts/cjk/fireflysung.ttf) format('truetype');
-    }
-    * {
-      font-family: Firefly Sung, DejaVu Sans, sans-serif;
-    }
-  </style>
-    </head>
-<body>     
-    <section id="main" class="public-task">
-    <a style="display: inline-block; font-size:12px; text-align: left; width: 100%; word-wrap: break-word;"> 
+<section id="main" class="public-task">
+    <a style=" display: inline-block; font-size:12px; text-align: left; width: 100%; word-wrap: break-word;"> 
     <?= $this->render('Task2pdf:printlayout/details', array(
         'task' => $task,
         'tags' => $tags,
@@ -80,7 +50,3 @@
    <?php endif ?>
     </a>
 </section>
-</body>
-</html>
-
-
