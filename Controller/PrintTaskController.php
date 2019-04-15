@@ -86,9 +86,10 @@ class PrintTaskController extends BaseController
         if ($this->configModel->get('task2pdf_cjk', 1) == 1) { $layout = 'Task2pdf:printlayout/printlayout_n'; } else { $layout = 'Task2pdf:printlayout/printlayout_cjk'; }
 
         $project = $this->getProject();
-        $tasks = $this->taskFinderModel->getAllIds($project['id']);
+        $task_ids = $this->taskFinderModel->getAllIds($project['id']);
         
-        foreach ($tasks as $task) {
+        foreach ($task_ids as $task_id) {
+        $task = $this->taskFinderModel->getById($task_id);
         $subtasks = $this->subtaskModel->getAll($task['id']);
         $files = $this->taskFileModel->getAllDocuments($task['id']);
         $commentSortingDirection = $this->userMetadataCacheDecorator->get(UserMetadataModel::KEY_COMMENT_SORTING_DIRECTION, 'ASC');
