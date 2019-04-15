@@ -112,7 +112,6 @@ class PrintTaskController extends BaseController
             'not_editable' => true,
         ));
         
-        $html .= '<section style="page-break-after: always;"></section>';
         $html_all = $html_all . $html;
             
         }
