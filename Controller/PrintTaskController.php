@@ -70,7 +70,7 @@ class PrintTaskController extends BaseController
 
     }
 
-}
+
 
     public function printProject()
     {
