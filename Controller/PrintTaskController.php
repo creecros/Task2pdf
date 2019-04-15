@@ -90,7 +90,7 @@ class PrintTaskController extends BaseController
         $task_ids = $this->taskFinderModel->getAllIds($project['id']);
         
         foreach ($task_ids as $task_id) {
-        $task = $this->taskFinderModel->getById($task_id);
+        $task = $this->taskFinderModel->getDetails($task_id);
         $subtasks = $this->subtaskModel->getAll($task['id']);
         $files = $this->taskFileModel->getAllDocuments($task['id']);
         $commentSortingDirection = $this->userMetadataCacheDecorator->get(UserMetadataModel::KEY_COMMENT_SORTING_DIRECTION, 'ASC');
