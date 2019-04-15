@@ -12,6 +12,7 @@ class Plugin extends Base
 	public function initialize()
 	{
 		$this->template->hook->attach('template:task:sidebar:information', 'task2pdf:print');
+		$this->template->hook->attach('template:project:dropdown', 'task2pdf:project_header/print_project');
 		$this->template->hook->attach('template:config:application', 'task2pdf:config/font_toggle');
 	}
 
@@ -35,7 +36,7 @@ class Plugin extends Base
 
 	public function getPluginVersion() 
 	{ 	 
-		return '1.1.0'; 
+		return '1.2.0'; 
 	}
 
 	public function getPluginDescription() 
