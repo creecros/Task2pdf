@@ -82,7 +82,7 @@ class PrintTaskController extends BaseController
         $options->set('isJavascriptEnabled', 'true');
         $dompdf = new Dompdf($options);
         $dompdf->setBasePath('/var/www/app/');
-        $html = '';
+        $html_all = '';
         
         if ($this->configModel->get('task2pdf_cjk', 1) == 1) { $layout = 'Task2pdf:printlayout/printlayout_n'; } else { $layout = 'Task2pdf:printlayout/printlayout_cjk'; }
 
@@ -95,7 +95,7 @@ class PrintTaskController extends BaseController
         $files = $this->taskFileModel->getAllDocuments($task['id']);
         $commentSortingDirection = $this->userMetadataCacheDecorator->get(UserMetadataModel::KEY_COMMENT_SORTING_DIRECTION, 'ASC');
 
-        $html .= $this->helper->layout->app($layout, array(
+        $html = $this->helper->layout->app($layout, array(
             'project' => $this->projectModel->getById($task['project_id']),
             'comments' => $this->commentModel->getAll($task['id'], $commentSortingDirection),
             'subtasks' => $subtasks,
@@ -113,10 +113,11 @@ class PrintTaskController extends BaseController
         ));
         
         $html .= '<section style="page-break-after: always;"></section>';
+        $html_all = $html_all + $html;
             
         }
         
-        $dompdf->loadHtml($html);
+        $dompdf->loadHtml($html_all);
      
 
         // (Optional) Setup the paper size and orientation
@@ -126,7 +127,7 @@ class PrintTaskController extends BaseController
         $dompdf->render();
 
         // Output the generated PDF to Browser
-        $dompdf->stream($project['id'] . '_' . $project['title'] . '.pdf');
+        $dompdf->stream($project['id'] . '_' . $project['name'] . '.pdf');
 
     }
 
