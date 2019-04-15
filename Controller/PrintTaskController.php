@@ -113,7 +113,7 @@ class PrintTaskController extends BaseController
         ));
         
         $html .= '<section style="page-break-after: always;"></section>';
-        $html_all = $html_all + $html;
+        $html_all = $html_all . $html;
             
         }
         
