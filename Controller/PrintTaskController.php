@@ -82,20 +82,20 @@ class PrintTaskController extends BaseController
         $options->set('isJavascriptEnabled', 'true');
         $dompdf = new Dompdf($options);
         $dompdf->setBasePath('/var/www/app/');
-        $html_all = '';
-        
+        $html_all = '<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head><body>';
+
         if ($this->configModel->get('task2pdf_cjk', 1) == 1) { $layout = 'Task2pdf:printlayout/printlayout_n'; } else { $layout = 'Task2pdf:printlayout/printlayout_cjk'; }
 
         $project = $this->getProject();
         $task_ids = $this->taskFinderModel->getAllIds($project['id']);
-        
+
         foreach ($task_ids as $task_id) {
         $task = $this->taskFinderModel->getDetails($task_id);
         $subtasks = $this->subtaskModel->getAll($task['id']);
         $files = $this->taskFileModel->getAllDocuments($task['id']);
         $commentSortingDirection = $this->userMetadataCacheDecorator->get(UserMetadataModel::KEY_COMMENT_SORTING_DIRECTION, 'ASC');
 
-        $html = $this->helper->layout->app($layout, array(
+        $html = $this->template->render($layout, array(
             'project' => $this->projectModel->getById($task['project_id']),
             'comments' => $this->commentModel->getAll($task['id'], $commentSortingDirection),
             'subtasks' => $subtasks,
@@ -112,10 +112,11 @@ class PrintTaskController extends BaseController
             'not_editable' => true,
         ));
         
-        $html_all = $html_all . $html;
-            
+        $html_all = $html_all . $html . '<div style="page-break-after: always;"></div>;
+
         }
-        
+
+        $html_all = $html_all . '</body></html>';
         $dompdf->loadHtml($html_all);
      
 
