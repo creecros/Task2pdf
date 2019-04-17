@@ -18,6 +18,7 @@ Convert a Task to a PDF, Printer Friendly!
 * PDF is created that is simple and printer friendly
 * Win!
 * Support for CJK Characters!
+* New Feature: Print all open tasks in a project to one PDF.
 
 *To turn on CJK Support, go to **Settings > Application Settings**, and the toggle will be located toward the bottom of the page.*
 
