@@ -26,9 +26,11 @@ Convert a Task to a PDF, Printer Friendly!
 ## Menu item:
 
 *Create PDF of a task*
+
 ![image](https://user-images.githubusercontent.com/26339368/46331051-f5fc4980-c5e3-11e8-8d3c-f1d023ee20eb.png)
 
 *Create PDF of all open tasks in a project*
+
 ![image](https://user-images.githubusercontent.com/26339368/56245029-5a589500-606c-11e9-85f3-af77617d9219.png)
 
 ## [Example PDF](https://github.com/creecros/Task2pdf/blob/master/Misc/1_Test%20Task.pdf):
