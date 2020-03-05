@@ -5,7 +5,7 @@
 -----------
 [![Latest release](https://img.shields.io/github/release/creecros/Task2pdf.svg)](https://github.com/creecros/Task2pdf/releases)
 ![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/creecros/Task2pdf/graphs/contributors)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://github.com/creecros/Task2pdf/graphs/contributors)
 ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
 ![Downloads](https://img.shields.io/github/downloads/creecros/Task2pdf/total.svg)
 
