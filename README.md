@@ -13,6 +13,8 @@ Donate to help keep this project maintained.
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SEGNEVQFXHXGW&source=url">
 <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" /></a>
 
+**Due to a lack of time, I will no longer Maintain this project, consider it Archived. If you wish to maintain, seek me out.**
+
 **:star: If you use it, you should star it on Github!**
 *It's the least you can do for all the work put into it!*
 
