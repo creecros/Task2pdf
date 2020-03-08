@@ -65,9 +65,12 @@ class PrintTaskController extends BaseController
         // Render the HTML as PDF
         $dompdf->render();
 
-        // Output the generated PDF to Browser
-        $dompdf->stream($task['id'] . '_' . $task['title'] . '.pdf');
-
+        // Output the generated PDF to Browser inline or as PDF download
+        if ($this->configModel->get('task2pdf_attachment', 1) == 1) { 
+			$dompdf->stream($task['id'] . '_' . $task['title'] . '.pdf', array("Attachment" => false));
+        } else { 
+			$dompdf->stream($task['id'] . '_' . $task['title'] . '.pdf');
+        }
     }
 
 
@@ -130,9 +133,8 @@ class PrintTaskController extends BaseController
         $dompdf->render();
 
         // Output the generated PDF to Browser
-        $dompdf->stream($project['id'] . '_' . $project['name'] . '.pdf');
+        $dompdf->stream($project['id'] . '_' . $project['name'] . '.pdf', array("Attachment" => false));
 
     }
 
 }
-
