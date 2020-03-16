@@ -2,8 +2,6 @@
 
 namespace Kanboard\Plugin\Task2pdf;
 
-require_once __DIR__.'/dompdf/autoload.inc.php';
-
 use Kanboard\Core\Plugin\Base;
 
 class Plugin extends Base
