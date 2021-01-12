@@ -105,11 +105,13 @@ class PrintTaskController extends BaseController
         
         $project = $this->getProject();
         $task_ids = $this->taskFinderModel->getAllIds($project['id']);
+        $files_to_embed = array();
 
         foreach ($task_ids as $task_id) {
         $task = $this->taskFinderModel->getDetails($task_id);
         $subtasks = $this->subtaskModel->getAll($task['id']);
         $files = $this->taskFileModel->getAllDocuments($task['id']);
+        $files_to_embed = array_merge($files_to_embed, $this->taskFileModel->getAll($task['id']));
         $commentSortingDirection = $this->userMetadataCacheDecorator->get(UserMetadataModel::KEY_COMMENT_SORTING_DIRECTION, 'ASC');
 
         $html = $this->template->render('Task2pdf:printlayout/printlayout_n', array(
@@ -130,7 +132,7 @@ class PrintTaskController extends BaseController
         ));
         
         $html_all = $html_all . $html . '<div style="page-break-after: always;"></div>';
-
+        
         }
 
         $html_all = $html_all . '</body></html>';
@@ -142,6 +144,16 @@ class PrintTaskController extends BaseController
 
         // Render the HTML as PDF
         $dompdf->render();
+        
+        $cpdf = $dompdf->get_canvas()->get_cpdf();
+        foreach ($files_to_embed as $file){
+            
+            $cpdf->addEmbeddedFile(
+                FILES_DIR. '/' . $file['path'],
+                $file['name'],
+                ''
+            );
+        }        
 
         // Output the generated PDF to Browser
         $dompdf->stream($project['id'] . '_' . $project['name'] . '.pdf', array("Attachment" => false));
