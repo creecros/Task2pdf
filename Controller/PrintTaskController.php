@@ -37,6 +37,7 @@ class PrintTaskController extends BaseController
         $task = $this->getTask();
         $subtasks = $this->subtaskModel->getAll($task['id']);
         $files = $this->taskFileModel->getAllDocuments($task['id']);
+        $file_to_embed = $this->taskFileModel->getAll($task['id']);
         $commentSortingDirection = $this->userMetadataCacheDecorator->get(UserMetadataModel::KEY_COMMENT_SORTING_DIRECTION, 'ASC');
 
         $html = $this->helper->layout->app($layout, array(
@@ -64,6 +65,16 @@ class PrintTaskController extends BaseController
 
         // Render the HTML as PDF
         $dompdf->render();
+        
+        $cpdf = $dompdf->get_canvas()->get_cpdf();
+        foreach ($file_to_embed as $file){
+            
+            $cpdf->addEmbeddedFile(
+                FILES_DIR. '/' . $file['path'],
+                $file['name'],
+                ''
+            );
+        }
 
         // Output the generated PDF to Browser inline or as PDF download
         if ($this->configModel->get('task2pdf_attachment', 1) == 1) { 
