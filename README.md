@@ -30,6 +30,7 @@ Convert a Task to a PDF, Printer Friendly!
 * Win!
 * Support for CJK Characters!
 * New Feature: Print all open tasks in a project to one PDF.
+* New Feature: Can embed attached files to PDFs
 
 *To turn on CJK Support, go to **Settings > Application Settings**, and the toggle will be located toward the bottom of the page.*
 
@@ -49,3 +50,10 @@ Convert a Task to a PDF, Printer Friendly!
 
 <img src="https://user-images.githubusercontent.com/26339368/46361826-9f6f2980-c63c-11e8-9ab9-de9d76e85f2a.png" width="400">
 <img src="https://user-images.githubusercontent.com/26339368/46362125-70a58300-c63d-11e8-9abe-0b9765306440.png" width="400">
+
+*Embeded files in PDF
+![image](https://user-images.githubusercontent.com/26339368/104648839-c1f8a580-5681-11eb-8e6c-a6c7c8f7acd9.png)
+
+## Option panel located in Settings > Application Settings 
+
+![image](https://user-images.githubusercontent.com/26339368/104648953-f1a7ad80-5681-11eb-8c89-ff4beba6622c.png)
