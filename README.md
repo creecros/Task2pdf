@@ -52,6 +52,7 @@ Convert a Task to a PDF, Printer Friendly!
 <img src="https://user-images.githubusercontent.com/26339368/46362125-70a58300-c63d-11e8-9abe-0b9765306440.png" width="400">
 
 *Embeded files in PDF
+
 ![image](https://user-images.githubusercontent.com/26339368/104648839-c1f8a580-5681-11eb-8e6c-a6c7c8f7acd9.png)
 
 ## Option panel located in Settings > Application Settings 
