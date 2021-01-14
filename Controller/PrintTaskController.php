@@ -65,15 +65,16 @@ class PrintTaskController extends BaseController
 
         // Render the HTML as PDF
         $dompdf->render();
-        
-        $cpdf = $dompdf->get_canvas()->get_cpdf();
-        foreach ($file_to_embed as $file){
-            
-            $cpdf->addEmbeddedFile(
-                FILES_DIR. '/' . $file['path'],
-                $file['name'],
-                ''
-            );
+        if ($this->configModel->get('task2pdf_embed_task', 1) == 1) {
+            $cpdf = $dompdf->get_canvas()->get_cpdf();
+            foreach ($file_to_embed as $file){
+                
+                $cpdf->addEmbeddedFile(
+                    FILES_DIR. '/' . $file['path'],
+                    $file['name'],
+                    ''
+                );
+            }
         }
 
         // Output the generated PDF to Browser inline or as PDF download
@@ -144,19 +145,24 @@ class PrintTaskController extends BaseController
 
         // Render the HTML as PDF
         $dompdf->render();
-        
-        $cpdf = $dompdf->get_canvas()->get_cpdf();
-        foreach ($files_to_embed as $file){
-            
-            $cpdf->addEmbeddedFile(
-                FILES_DIR. '/' . $file['path'],
-                $file['name'],
-                ''
-            );
-        }        
+        if ($this->configModel->get('task2pdf_embed_projects', 1) == 1) {
+            $cpdf = $dompdf->get_canvas()->get_cpdf();
+            foreach ($files_to_embed as $file){
+                
+                $cpdf->addEmbeddedFile(
+                    FILES_DIR. '/' . $file['path'],
+                    $file['name'],
+                    ''
+                );
+            }  
+        }
 
-        // Output the generated PDF to Browser
-        $dompdf->stream($project['id'] . '_' . $project['name'] . '.pdf', array("Attachment" => false));
+        // Output the generated PDF to Browser inline or as PDF download
+        if ($this->configModel->get('task2pdf_attachment', 1) == 1) { 
+			$dompdf->stream($project['id'] . '_' . $project['name'] . '.pdf', array("Attachment" => false));
+        } else { 
+			$dompdf->stream($project['id'] . '_' . $project['name'] . '.pdf');
+        }
 
     }
 
