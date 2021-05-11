@@ -13,5 +13,4 @@
     <h2><?= t('PDF Download or Inline') ?>:</h2>
 	<?= $this->form->radio('task2pdf_attachment', t('Show PDF inline Browser') , 1, isset($values['task2pdf_attachment'])&& $values['task2pdf_attachment']==1) ?>
     <?= $this->form->radio('task2pdf_attachment', t('Download pdf') , 2, isset($values['task2pdf_attachment'])&& $values['task2pdf_attachment']==2) ?>
-    <?= $this->form->radio('task2pdf_attachment', t('Download pdf') , 2, isset($values['task2pdf_attachment'])&& $values['task2pdf_attachment']==2) ?>
 </div>
