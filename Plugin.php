@@ -3,6 +3,7 @@
 namespace Kanboard\Plugin\Task2pdf;
 
 use Kanboard\Core\Plugin\Base;
+use Kanboard\Core\Translator;
 
 class Plugin extends Base
 
@@ -21,6 +22,11 @@ class Plugin extends Base
             )
         );
        }
+
+	// Translation
+	public function onStartup() {
+        Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
+    }
 	
 	public function getPluginName()	
 	{ 		 
