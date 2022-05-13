@@ -10,6 +10,7 @@ class ComposerStaticInit443d77403e4dafb9f0628f8dcbc4aeee
         'S' => 
         array (
             'Svg\\' => 4,
+            'Sabberworm\\CSS\\' => 15,
         ),
         'F' => 
         array (
@@ -26,6 +27,10 @@ class ComposerStaticInit443d77403e4dafb9f0628f8dcbc4aeee
         array (
             0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
         ),
+        'Sabberworm\\CSS\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/src',
+        ),
         'FontLib\\' => 
         array (
             0 => __DIR__ . '/..' . '/phenx/php-font-lib/src/FontLib',
@@ -36,17 +41,8 @@ class ComposerStaticInit443d77403e4dafb9f0628f8dcbc4aeee
         ),
     );
 
-    public static $prefixesPsr0 = array (
-        'S' => 
-        array (
-            'Sabberworm\\CSS' => 
-            array (
-                0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib',
-            ),
-        ),
-    );
-
     public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Dompdf\\Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
         'HTML5_Data' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Data.php',
         'HTML5_InputStream' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/InputStream.php',
@@ -60,7 +56,6 @@ class ComposerStaticInit443d77403e4dafb9f0628f8dcbc4aeee
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit443d77403e4dafb9f0628f8dcbc4aeee::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit443d77403e4dafb9f0628f8dcbc4aeee::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit443d77403e4dafb9f0628f8dcbc4aeee::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit443d77403e4dafb9f0628f8dcbc4aeee::$classMap;
 
         }, null, ClassLoader::class);
