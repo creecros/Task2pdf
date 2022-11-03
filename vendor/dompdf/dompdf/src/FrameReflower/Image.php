@@ -1,9 +1,7 @@
 <?php
 /**
  * @package dompdf
- * @link    http://dompdf.github.com/
- * @author  Benj Carson <benjcarson@digitaljunkies.ca>
- * @author  Fabien Ménager <fabien.menager@gmail.com>
+ * @link    https://github.com/dompdf/dompdf
  * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
  */
 namespace Dompdf\FrameReflower;
@@ -188,8 +186,8 @@ class Image extends AbstractFrameReflower
             print $width . " " . $height . ";";
         }
 
-        $style->width = $width;
-        $style->height = $height;
+        $style->set_used("width", $width);
+        $style->set_used("height", $height);
     }
 
     protected function resolve_margins(): void
@@ -200,16 +198,16 @@ class Image extends AbstractFrameReflower
         $style = $this->_frame->get_style();
 
         if ($style->margin_left === "auto") {
-            $style->margin_left = 0;
+            $style->set_used("margin_left", 0.0);
         }
         if ($style->margin_right === "auto") {
-            $style->margin_right = 0;
+            $style->set_used("margin_right", 0.0);
         }
         if ($style->margin_top === "auto") {
-            $style->margin_top = 0;
+            $style->set_used("margin_top", 0.0);
         }
         if ($style->margin_bottom === "auto") {
-            $style->margin_bottom = 0;
+            $style->set_used("margin_bottom", 0.0);
         }
     }
 }

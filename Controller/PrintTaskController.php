@@ -29,9 +29,10 @@ class PrintTaskController extends BaseController
         $options->set('defaultFont', 'DejaVu Sans');
         $options->set('fontHeightRatio', '.9');
         $options->set('isJavascriptEnabled', 'true');
+        set_time_limit(600);
         $dompdf = new Dompdf($options);
-        $dompdf->setBasePath('/var/www/app/');
-        
+        $dompdf->setBasePath('/var/www/app/data/');
+
         if ($this->configModel->get('task2pdf_cjk', 1) == 1) { $layout = 'Task2pdf:printlayout/printlayout_n'; } else { $layout = 'Task2pdf:printlayout/printlayout_cjk'; }
 
         $task = $this->getTask();
