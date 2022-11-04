@@ -1,10 +1,10 @@
 <?php if (! empty($files) || ! empty($images)): ?>
-    <table style="border:1px solid #eee;border-collapse:collapse;width:100%;">
-        <tr style="background-color: #eee;">
-            <th><?= t('Filename') ?></th>
-            <th><?= t('Creator') ?></th>
-            <th><?= t('Date') ?></th>
-            <th><?= t('Size') ?></th>
+    <table style="width:100%; position: relative; table-layout: fixed;">
+        <tr style="border:1px solid #eee; background-color: #eee; margin-top: 6px; margin-bottom: 6px; position: relative;">
+            <th style="text-align:left; padding: 4px;"><?= t('Filename') ?></th>
+            <th style="text-align:left; padding: 4px;"><?= t('Creator') ?></th>
+            <th style="text-align:left; padding: 4px;"><?= t('Date') ?></th>
+            <th style="text-align:left; padding: 4px;"><?= t('Size') ?></th>
         </tr>
         <?php foreach ($files as $file): ?>
             <tr style="background-color: #fff;">
@@ -26,7 +26,7 @@
             <tr style="background-color: #fff;">
                 <td>
                     <img src="data:image/png;base64,<?= base64_encode(file_get_contents(FILES_DIR.DIRECTORY_SEPARATOR.$image['path'])); ?>" 
-                        style="width: 100%;border:1px solid #efefef;border-radius:5px;margin-bottom:20px;box-shadow:4px 2px 10px -6px rgb(0 0 0 / 55%);margin-right: 15px">
+                        style="width: 100px; border:1px solid #000; border-radius:3px; margin-bottom:10px; box-shadow:4px 2px 10px -6px rgb(0 0 0 / 55%); margin: 0 15px 0 0; /*max-height:100px;*/">
                 </td>
                 <td>
                     <?= $this->text->e($image['user_name'] ?: $image['username']) ?>
