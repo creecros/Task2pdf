@@ -22,22 +22,27 @@
                 </td>
             </tr>
         <?php endforeach ?>
+    </table>
+    <br>
+    <table style="width:100%; position: relative; table-layout: fixed;">
+        <tr style="background-color: #fff;">
+        <?php $c = 0; ?>
         <?php foreach ($images as $image): ?>
-            <tr style="background-color: #fff;">
+        <?php $c = $c + 1; ?>
+            <?php if ($c == 6): ?>
+                <?php $c = 0; ?>
+                </tr>
+                <tr style="background-color: #fff;">
+            <?php endif ?>
                 <td>
-                    <img src="data:image/png;base64,<?= base64_encode(file_get_contents(FILES_DIR.DIRECTORY_SEPARATOR.$image['path'])); ?>" 
-                        style="width: 100px; border:1px solid #000; border-radius:3px; margin-bottom:10px; box-shadow:4px 2px 10px -6px rgb(0 0 0 / 55%); margin: 0 15px 0 0; /*max-height:100px;*/">
+                    <br><img src="data:image/png;base64,<?= base64_encode(file_get_contents(FILES_DIR.DIRECTORY_SEPARATOR.$image['path'])); ?>" 
+                        style="width: 100px; border:1px solid #000; border-radius:3px; margin-bottom:10px; box-shadow:4px 2px 10px -6px rgb(0 0 0 / 55%); margin: 0 15px 0 0; /*max-height:100px;*/"></br>
+                        <br><?= $this->text->e($image['name'] ?: $image['name']) ?></br>
+                        <br><?= $this->dt->date($image['date']) ?></br>
+                        <br><?= $this->text->bytes($image['size']) ?></br>
                 </td>
-                <td>
-                    <?= $this->text->e($image['user_name'] ?: $image['username']) ?>
-                </td>
-                <td>
-                    <?= $this->dt->date($image['date']) ?>
-                </td>
-                <td>
-                    <?= $this->text->bytes($image['size']) ?>
-                </td>
-            </tr>
+            
         <?php endforeach ?>
+        </tr>
     </table>
 <?php endif ?>
