@@ -34,6 +34,31 @@ Convert a Task to a PDF, Printer Friendly!
 
 *To turn on CJK Support, go to **Settings > Application Settings**, and the toggle will be located toward the bottom of the page.*
 
+# How can I make Task2pdf utilize my plugin?
+1.) Utilize any hook that exists in the templates, to insert your own templates in desired locations.
+```
+template:subtask:table:header:before-timetracking
+template:task:details:top
+template:task:details:bottom
+task2pdf:printlayout:beforedetails
+task2pdf:printlayout:beforedescription
+task2pdf:printlayout:beforesubtasks
+task2pdf:printlayout:beforefiles
+task2pdf:printlayout:beforeinternallinks
+task2pdf:printlayout:beforecomments
+task2pdf:printlayout:bottomoflayout
+```
+
+2.) For image display using internal links you have 2 options.
+
+Option 1: Pass html to printModel->preparePrint function, and then through markdownPlus. *Must have plugin MarkdownPlus installed*
+`$this->text->markdown($this->task->printModel->preparePrint($task['description']), isset($is_public) && $is_public)`
+
+Option 2: Prepend `data:image/png;base64,` to src in img tags, and base64_encode the image data
+`<img src="data:image/png;base64,<?= base64_encode(file_get_contents(FILES_DIR.DIRECTORY_SEPARATOR.$image['path'])); ?>">`
+
+
+
 # Screenshots?
 
 ## Menu item:

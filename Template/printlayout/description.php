@@ -23,7 +23,7 @@
     </div>
     <div class="accordion-content">
         <article class="markdown">
-            <?= $this->text->markdown($this->task->printModel->codeblockFix($task['description']), isset($is_public) && $is_public) ?>
+            <?= $this->text->markdown($this->task->printModel->preparePrint($task['description']), isset($is_public) && $is_public) ?>
         </article>
     </div>
 </section>
