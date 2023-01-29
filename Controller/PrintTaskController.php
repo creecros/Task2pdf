@@ -86,6 +86,48 @@ class PrintTaskController extends BaseController
         }
     }
 
+    public function printProjectAll()
+    {
+        $status = array(TaskModel::STATUS_OPEN, TaskModel::STATUS_CLOSED);
+
+        $project = $this->getProject();
+        $task_ids = $this->db
+        ->table(TaskModel::TABLE)
+        ->eq(TaskModel::TABLE.'.project_id', $project['id'])
+        ->in(TaskModel::TABLE.'.is_active', $status)
+        ->asc(TaskModel::TABLE.'.id')
+        ->findAllByColumn(TaskModel::TABLE.'.id');
+        self::printProject($task_ids);
+    }
+
+    public function printProjectOpen()
+    {
+        $status = array(TaskModel::STATUS_OPEN);
+
+        $project = $this->getProject();
+        $task_ids = $this->db
+        ->table(TaskModel::TABLE)
+        ->eq(TaskModel::TABLE.'.project_id', $project['id'])
+        ->in(TaskModel::TABLE.'.is_active', $status)
+        ->asc(TaskModel::TABLE.'.id')
+        ->findAllByColumn(TaskModel::TABLE.'.id');
+        self::printProject($task_ids);
+    }
+
+    public function printProjectClosed()
+    {
+        $status = array(TaskModel::STATUS_CLOSED);
+
+        $project = $this->getProject();
+        $task_ids = $this->db
+        ->table(TaskModel::TABLE)
+        ->eq(TaskModel::TABLE.'.project_id', $project['id'])
+        ->in(TaskModel::TABLE.'.is_active', $status)
+        ->asc(TaskModel::TABLE.'.id')
+        ->findAllByColumn(TaskModel::TABLE.'.id');
+        self::printProject($task_ids);
+    }
+
     public function printProjectPerUser()
     {
         $status = array(TaskModel::STATUS_OPEN, TaskModel::STATUS_CLOSED);
