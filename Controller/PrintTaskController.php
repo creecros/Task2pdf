@@ -16,6 +16,7 @@ use Kanboard\Model\ColorModel;
 use Kanboard\Model\TaskTagModel;
 use Kanboard\Model\TaskFileModel;
 use Kanboard\Model\TaskModel;
+use Kanboard\Filter\TaskProjectFilter;
 
 class PrintTaskController extends BaseController
 {
@@ -173,6 +174,19 @@ class PrintTaskController extends BaseController
         ->in(TaskModel::TABLE.'.is_active', $status)
         ->asc(TaskModel::TABLE.'.id')
         ->findAllByColumn(TaskModel::TABLE.'.id');
+        self::printProject($task_ids);
+    }
+
+    public function printProjectByFilter()
+    {
+        $project = $this->getProject();
+        $search = $this->helper->projectHeader->getSearchQuery($project);
+        $tasks = $this->taskLexer->build($search)->withFilter(new TaskProjectFilter($project['id']))->format($this->taskListFormatter);
+        $task_ids = array();
+        foreach ($tasks as $task) 
+        {
+            array_push($task_ids,$task['id']);
+        }
         self::printProject($task_ids);
     }
 
