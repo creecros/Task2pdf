@@ -98,7 +98,7 @@ class PrintTaskController extends BaseController
         ->in(TaskModel::TABLE.'.is_active', $status)
         ->asc(TaskModel::TABLE.'.id')
         ->findAllByColumn(TaskModel::TABLE.'.id');
-        self::printProject($task_ids);
+        self::printProject($task_ids, $project);
     }
 
     public function printProjectOpen()
@@ -112,7 +112,7 @@ class PrintTaskController extends BaseController
         ->in(TaskModel::TABLE.'.is_active', $status)
         ->asc(TaskModel::TABLE.'.id')
         ->findAllByColumn(TaskModel::TABLE.'.id');
-        self::printProject($task_ids);
+        self::printProject($task_ids, $project);
     }
 
     public function printProjectClosed()
@@ -126,7 +126,7 @@ class PrintTaskController extends BaseController
         ->in(TaskModel::TABLE.'.is_active', $status)
         ->asc(TaskModel::TABLE.'.id')
         ->findAllByColumn(TaskModel::TABLE.'.id');
-        self::printProject($task_ids);
+        self::printProject($task_ids, $project);
     }
 
     public function printProjectPerUser()
@@ -142,7 +142,7 @@ class PrintTaskController extends BaseController
         ->in(TaskModel::TABLE.'.is_active', $status)
         ->asc(TaskModel::TABLE.'.id')
         ->findAllByColumn(TaskModel::TABLE.'.id');
-        self::printProject($task_ids);
+        self::printProject($task_ids, $project);
     }
 
     public function printProjectPerUserOpen()
@@ -158,7 +158,7 @@ class PrintTaskController extends BaseController
         ->in(TaskModel::TABLE.'.is_active', $status)
         ->asc(TaskModel::TABLE.'.id')
         ->findAllByColumn(TaskModel::TABLE.'.id');
-        self::printProject($task_ids);
+        self::printProject($task_ids, $project);
     }
 
     public function printProjectPerUserClosed()
@@ -174,7 +174,7 @@ class PrintTaskController extends BaseController
         ->in(TaskModel::TABLE.'.is_active', $status)
         ->asc(TaskModel::TABLE.'.id')
         ->findAllByColumn(TaskModel::TABLE.'.id');
-        self::printProject($task_ids);
+        self::printProject($task_ids, $project);
     }
 
     public function printProjectByFilter()
@@ -187,10 +187,10 @@ class PrintTaskController extends BaseController
         {
             array_push($task_ids,$task['id']);
         }
-        self::printProject($task_ids);
+        self::printProject($task_ids, $project);
     }
 
-    function printProject($task_ids)
+    function printProject($task_ids, $project)
     {
         // instantiate and use t$options = new Options();
         $options = new Options();
