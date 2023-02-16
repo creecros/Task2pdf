@@ -136,6 +136,6 @@
 </table>
 </div>
      <a style=" display: inline-block; font-size:14px; text-align: left; line-height:5px;"> 
-        <?= $this->hook->render('template:task:details:bottom', array('task' => $task, 'printlayout' => $printlayout)) ?>
+        <?= $this->hook->render('template:task:details:bottom', array('task' => $task)) ?>
     </a>
 </section>

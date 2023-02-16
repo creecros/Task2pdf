@@ -6,6 +6,7 @@
         'tags' => $tags,
         'project' => $project,
         'editable' => false,
+        'printlayout' => true,
     )) ?>
     </a>
     <br>
