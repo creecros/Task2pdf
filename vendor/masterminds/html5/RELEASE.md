@@ -1,5 +1,60 @@
 # Release Notes
 
+2.7.6  (2021-08-18)
+
+- #218: Address comment handling issues 
+
+2.7.5  (2021-07-01)
+
+- #204: Travis: Enable tests on PHP 8.0 
+- #207: Fix PHP 8.1 deprecations 
+
+2.7.4  (2020-10-01)
+
+- #191: Fix travisci build 
+- #195: Add .gitattributes file with export-ignore rules 
+- #194: Fix query parameter parsed as character entity
+
+2.7.3 (2020-07-05)
+
+- #190: mitigate cyclic reference between output rules and the traverser objects 
+
+2.7.2 (2020-07-01)
+
+- #187: Fixed memory leak in HTML5::saveHTML() 
+- #186: Add special case for end tag </br>
+
+2.7.1 (2020-06-14)
+
+- #171: add PHP 7.4 job 
+- #178: Prevent infinite loop on un-terminated entity declaration at EOF 
+
+2.7.0 (2019-07-25)
+
+- #164: Drop HHVM support
+- #168: Set default encoding in the DOMDocument object
+
+2.6.0 (2019-03-10)
+
+- #163: Allow to pass a charset to the Scanner
+
+2.5.0 (2018-12-27)
+
+- #162, #161, #155, #154, #153, #151: big performance improvements
+- #156: fixed typos
+- #160: adopt and enforce code style
+- #159: remove deprecated php unit base test case
+- #150: backport changes from old master branch 
+
+2.4.0 (2018-11-17)
+
+- #148: Improve performance by moving sequence matching 
+- #147: Improve the Tokenizer performance 
+- #146: Improve performance by relying on a native string instead of InputStream 
+- #144: Add DOM extension in composer.json
+- #145: Add more extensions on composer.json, improve phpdocs and remove dead code 
+- #143: Remove experimental comment 
+
 2.3.1 (2018-10-18)
 
 - #121: Audio is not a block tag (fixed by #141)

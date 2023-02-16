@@ -6,50 +6,51 @@ use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
 
 class Plugin extends Base
-
 {
-	public function initialize()
-	{
-		$this->template->hook->attach('template:task:sidebar:information', 'task2pdf:print');
-		$this->template->hook->attach('template:project:dropdown', 'task2pdf:project_header/print_project');
-		$this->template->hook->attach('template:config:application', 'task2pdf:config/font_toggle');
-	}
+    public function initialize()
+    {
+        $this->template->hook->attach('template:task:sidebar:information', 'task2pdf:print');
+        $this->template->hook->attach('template:project:dropdown', 'task2pdf:project_header/print_project');
+        $this->template->hook->attach('template:config:application', 'task2pdf:config/font_toggle');
+    }
 
-	public function getClasses() {
+    public function getClasses()
+    {
         return array(
             'Plugin\Task2pdf\Model' => array(
                 'PrintModel',
             )
         );
-       }
+    }
 
-	// Translation
-	public function onStartup() {
+    // Translation
+    public function onStartup()
+    {
         Translator::load($this->languageModel->getCurrentLanguage(), __DIR__.'/Locale');
     }
-	
-	public function getPluginName()	
-	{ 		 
-		return 'Task2pdf'; 
-	}
 
-	public function getPluginAuthor() 
-	{ 	 
-		return 'Craig Crosby'; 
-	}
+    public function getPluginName()
+    {
+        return 'Task2pdf';
+    }
 
-	public function getPluginVersion() 
-	{ 	 
-		return '1.7.0'; 
-	}
+    public function getPluginAuthor()
+    {
+        return 'Craig Crosby';
+    }
 
-	public function getPluginDescription() 
-	{ 
-		return 'Create a printer friendly PDF of a task.'; 
-	}
+    public function getPluginVersion()
+    {
+        return '1.8.0';
+    }
 
-	public function getPluginHomepage() 
-	{ 	 
-		return 'https://github.com/creecros/Task2pdf'; 
-	}
+    public function getPluginDescription()
+    {
+        return 'Create a printer friendly PDF of a task.';
+    }
+
+    public function getPluginHomepage()
+    {
+        return 'https://github.com/creecros/Task2pdf';
+    }
 }
