@@ -46,7 +46,7 @@ class Plugin extends Base
 
     public function getPluginDescription()
     {
-        return 'Create a printer friendly PDF of a task.';
+        return t('Create a printer friendly PDF of a task.');
     }
 
     public function getPluginHomepage()

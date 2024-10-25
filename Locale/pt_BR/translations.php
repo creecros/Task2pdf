@@ -1,6 +1,7 @@
 <?php
 
 return array(
+	'Create a printer friendly PDF of a task.' => 'Criar um PDF de uma tarefa que possa ser impresso.',
     'Create PDF' => 'Gerar PDF',
     'Print Open Tasks' => 'Imprimir Tarefas Abertas',
     'Created at' => 'Criado em',
